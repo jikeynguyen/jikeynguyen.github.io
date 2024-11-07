@@ -11,12 +11,15 @@ runs:
         node-version-file: .nvmrc
         cache: "pnpm"
 
-    - name: Cache dependencies ⚡
-      id: cache_dependencies
-      uses: actions/cache@v3
-      with:
-        path: node_modules
-        key: node-modules-${{ hashFiles('pnpm-lock.yaml') }}
+        - name: Cache dependencies ⚡
+        id: cache_dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.pnpm-store
+          key: pnpm-store-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            pnpm-store-
+      
 
     - name: Install dependencies 🔧
       shell: bash
