@@ -1,7 +1,7 @@
 name: setup-node
-description: 'Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧'
+description: "Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧"
 runs:
-  using: 'composite'
+  using: "composite"
   steps:
     - uses: actions/checkout@v3
     - uses: pnpm/action-setup@v4
@@ -9,14 +9,17 @@ runs:
       uses: actions/setup-node@v4
       with:
         node-version-file: .nvmrc
-        cache: 'pnpm'
+        cache: "pnpm"
 
-    - name: Cache dependencies ⚡
-      id: cache_dependencies
-      uses: actions/cache@v3
-      with:
-        path: node_modules
-        key: node-modules-${{ hashFiles('pnpm-lock.yaml') }}
+        - name: Cache dependencies ⚡
+        id: cache_dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.pnpm-store
+          key: pnpm-store-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            pnpm-store-
+      
 
     - name: Install dependencies 🔧
       shell: bash
