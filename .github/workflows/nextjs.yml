@@ -28,15 +28,15 @@ jobs:
           cache: "pnpm"
 
       - name: Install pnpm
-        run: npm install -g pnpm
+        run: corepack enable && corepack prepare pnpm@latest --activate
 
-      - name: Install dependencies with pnpm
+      - name: Install dependencies
         run: pnpm install
 
-      - name: Build Next.js project
+      - name: Build project
         run: pnpm build
 
-      - name: Upload artifact for deployment
+      - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: .next
