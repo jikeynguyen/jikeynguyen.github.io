@@ -6,9 +6,9 @@ export const DATA = {
   initials: "TN",
   url: "https://jikeynguyen.github.io/",
   location: "Thu Duc, TP HCM",
-  locationLink: "https://www.google.com/maps/place/Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh,+H%E1%BB%93+Ch%C3%AD+Minh/@10.754792,106.6952276,10z/data=!3m1!4b1!4m6!3m5!1s0x317529292e8d3dd1:0xf15f5aad773c112b!8m2!3d10.8230989!4d106.6296638!16zL20vMGhuNGg?entry=ttu&g_ep=EgoyMDI0MDkyNS4wIKXMDSoASAFQAw%3D%3D",
-  description:
-    "Software engineer fueled by tech innovation, active in sports, and driven by a passion for both fitness and coding.",
+  locationLink:
+    "https://www.google.com/maps/place/Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh,+H%E1%BB%93+Ch%C3%AD+Minh/@10.754792,106.6952276,10z/data=!3m1!4b1!4m6!3m5!1s0x317529292e8d3dd1:0xf15f5aad773c112b!8m2!3d10.8230989!4d106.6296638!16zL20vMGhuNGg?entry=ttu&g_ep=EgoyMDI0MDkyNS4wIKXMDSoASAFQAw%3D%3D",
+  description: "",
   summary:
     "Skilled in backend development with Node.js and Nest.js, and proficient in React for frontend, I excel in building robust solutions. Known for seamless teamwork and clear communication, I thrive in collaborative environments.",
   avatarUrl: "/me.png",
@@ -31,7 +31,6 @@ export const DATA = {
     "NestJS",
     "MongoDB",
     "Redis",
-
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -95,16 +94,15 @@ export const DATA = {
       start: "2020",
       end: "2024",
     },
-
   ],
   projects: [
     {
-      title: "Chat Collect",
-      href: "https://chatcollect.com",
-      dates: "Jan 2024 - Feb 2024",
+      title: "Choiee",
+      href: "https://choiee.com/en",
+      dates: "Jul 2024 - Dec 2024",
       active: true,
       description:
-        "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+        "During my internship at Choiee, a sports-focused tech start-up, I contributed to developing a platform that connects sports enthusiasts with playgrounds and opponents. I worked on both the UI and back-end, enhancing functionality and user experience to support the app's mission of bringing convenience to the sports community.",
       technologies: [
         "Next.js",
         "Typescript",
@@ -118,13 +116,12 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://chatcollect.com",
+          href: "https://choiee.com/en",
           icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+      video: "https://pub-c5fe33ee90664092bb9757fe9876d964.r2.dev/choiee.mp4",
     },
     {
       title: "Magic UI",
