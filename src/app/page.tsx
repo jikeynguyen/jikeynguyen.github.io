@@ -19,11 +19,12 @@ const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
   return (
-    <main className="flex flex-col min-h-[10dvh] space-y-10">
-      <section id="hero">
-        <div className="mx-auto w-full max-w-2xl space-y-8">
-          <div className="gap-2 flex justify-between">
-            <div className="flex-col flex flex-1 space-y-1.5">
+    <main className="flex flex-col min-h-screen space-y-10">
+      <section id="hero" className="w-full">
+        <div className="mx-auto w-full max-w-screen-xl px-4 md:px-8 lg:px-16 space-y-8">
+          <div className="flex flex-wrap gap-4 justify-between">
+            <div className="flex flex-col flex-1 space-y-1.5">
+
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
